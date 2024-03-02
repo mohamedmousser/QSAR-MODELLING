@@ -147,8 +147,8 @@ df.loc[(df['Standard Value'] > 1000), 'Activity'] = 'Inactive'
 # the minimal one
 df.drop_duplicates(subset=['CHEMBL_ID'], inplace=True)
 
-# Drop compounds with intermediate activity (if you want !)
-df.drop(df[df['Activity'] == 'Intermediate'].index, inplace=True)
+# Considering the intermidates as inactives
+df['Activity'] = df['Activity'].replace('Intermediate', 'Inactive')
 
 # Get the number of ligands
 ligand_number = df.shape[0]
