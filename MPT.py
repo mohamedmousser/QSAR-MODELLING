@@ -12,6 +12,7 @@ os.chdir(os.getcwd())
 
 Activity_file = str(input('Enter the name of activity file please ("act.csv" in our example) '))
 Descriptors_filePATH = str(input('Enter the name of the descriptors file please ("Descriptors.csv" in our example) '))
+Target = str(input('Enter the name of the kinase please ("DYRK1" in our example) '))
 
 IC50_filePATH = Activity_file
 Descriptors_filePATH = Descriptors_filePATH
@@ -124,9 +125,9 @@ if not os.path.exists(path):
     os.makedirs(path)
     print("New directory is created !")
 
-corr_matrix.to_csv(path + "/correlation.csv", index=False)
-train_df.to_csv(path + '/train_IGF1R.csv', index=False)
-test_df.to_csv(path + '/test_IGF1R.csv', index=False)
+corr_matrix.to_csv(path + "/correlation_" + Target + ".csv", index=False)
+train_df.to_csv(path + '/train_' + Target + '.csv', index=False)
+test_df.to_csv(path + '/test_' + Target + '.csv', index=False)
 
 print('Correlation matrix, train and test files were successfully created !')
 print('Please, if this program helps your research, cite this article : doi ... ')
