@@ -156,5 +156,5 @@ ligand_number = df.shape[0]
 # Write the cleaned data into a new csv output file
 df.to_excel('treated_' + TARGET + '.xlsx', index=False)
 
-print(100*'*', '\nYour raw data have been cleaned. A file named "' + 'treated_' + TARGET + '.xlsx" was successfully generated !\n', 'Please, if these programs help your scientific research, cite us : SAR & QSAR IN ENVIRONMENTAL RESEARCH : doi ...')
+print(100*'*', '\nYour raw data have been cleaned. A file named "' + 'treated_' + TARGET + '.xlsx" was successfully generated !\n', 'Please, if these programs help your scientific research, cite us : doi ...')
 print(100 * '*')
