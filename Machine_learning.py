@@ -127,5 +127,5 @@ print("AUC :", round(auc, 2))
 
 print(100 * '*')
 
-print('Please, if you use this program to build your model for scientific research, cite us : SAR & QSAR IN ENVIRONMENTAL RESEARCH : doi ...')
+print('Please, if you use this program to build your model for scientific research, cite us : doi ...')
 print(100 * '*')
